@@ -337,7 +337,7 @@ void menuStatus(void)
         infoMenu.menu[++infoMenu.cur] = menuHeat;
         break;
       case KEY_ICON_2:
-        infoMenu.menu[++infoMenu.cur] = menuFan;
+        infoMenu.menu[++infoMenu.cur] = menuChange;
         break;
       case KEY_ICON_3:
         infoMenu.menu[++infoMenu.cur] = menuSpeed;

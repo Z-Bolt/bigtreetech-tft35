@@ -74,6 +74,7 @@
 #include "BabyStep.h"
 #include "ledcolor.h"
 #include "Parametersetting.h"
+#include "Change.h"
 
 #include "Extrude.h"
 #include "Fan.h"
