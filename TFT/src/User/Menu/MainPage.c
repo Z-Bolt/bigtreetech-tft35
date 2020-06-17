@@ -52,26 +52,26 @@ void classicMenu(void)
   // title
   LABEL_READY,
   // icon             label
-    {{ICON_HEAT,      LABEL_PREHEAT},
-      {ICON_MOVE,     LABEL_MOVE},
-      {ICON_HOME,     LABEL_HOME},
+    {{ICON_MAINMENU,      LABEL_MAINMENU},
+      {ICON_LOAD,     LABEL_LOAD},
+      {ICON_UNLOAD,     LABEL_UNLOAD},
       {ICON_PRINT,    LABEL_PRINT},
-      {ICON_EXTRUDE,  LABEL_EXTRUDE},
-      {ICON_FAN,      LABEL_FAN},
-      {ICON_SETTINGS, LABEL_SETTINGS},
-      {ICON_LEVELING, LABEL_LEVELING}}
+      {ICON_BACKGROUND,  LABEL_BACKGROUND},
+      {ICON_BACKGROUND,  LABEL_BACKGROUND},
+      {ICON_BACKGROUND,  LABEL_BACKGROUND},
+      {ICON_BACKGROUND,  LABEL_BACKGROUND}}
   };
 
-  if (infoMachineSettings.autoLevel == 1)
-  {
-    classicPageItems.items[7].icon = ICON_LEVELING;
-    classicPageItems.items[7].label.index = LABEL_ABL;
-  }
-  else
-  {
-    classicPageItems.items[7].icon = ICON_MANUAL_LEVEL;
-    classicPageItems.items[7].label.index = LABEL_LEVELING;
-  }
+ // if (infoMachineSettings.autoLevel == 1)
+ // {
+ //   classicPageItems.items[7].icon = ICON_LEVELING;
+ //   classicPageItems.items[7].label.index = LABEL_ABL;
+ // }
+ // else
+ // {
+ //   classicPageItems.items[7].icon = ICON_MANUAL_LEVEL;
+ //   classicPageItems.items[7].label.index = LABEL_LEVELING;
+ // }
   KEY_VALUES key_num=KEY_IDLE;
   GUI_SetBkColor(infoSettings.bg_color);
 
@@ -82,21 +82,21 @@ void classicMenu(void)
     key_num = menuKeyGetValue();
     switch(key_num)
     {
-      case KEY_ICON_0: infoMenu.menu[++infoMenu.cur] = menuPreheat;   break;
-      case KEY_ICON_1: infoMenu.menu[++infoMenu.cur] = menuMove;      break;
-      case KEY_ICON_2: infoMenu.menu[++infoMenu.cur] = menuHome;      break;
+      case KEY_ICON_0: infoMenu.menu[++infoMenu.cur] = menuSettings;   break;
+      case KEY_ICON_1: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
+      case KEY_ICON_2: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
       case KEY_ICON_3: infoMenu.menu[++infoMenu.cur] = menuPrint;     break;
-      case KEY_ICON_4: infoMenu.menu[++infoMenu.cur] = menuExtrude;   break;
-      case KEY_ICON_5: infoMenu.menu[++infoMenu.cur] = menuFan;       break;
-      case KEY_ICON_6: infoMenu.menu[++infoMenu.cur] = menuSettings;  break;
-      case KEY_ICON_7:
-        if(infoMachineSettings.autoLevel == 1){
-            infoMenu.menu[++infoMenu.cur] = menuAutoLeveling;
-          }
-        else{
-          infoMenu.menu[++infoMenu.cur] = menuManualLeveling;
-          }
-        break;
+      //case KEY_ICON_4: infoMenu.menu[++infoMenu.cur] = menuExtrude;   break;
+      //case KEY_ICON_5: infoMenu.menu[++infoMenu.cur] = menuFan;       break;
+      //case KEY_ICON_6: infoMenu.menu[++infoMenu.cur] = menuSettings;  break;
+      //case KEY_ICON_7:
+      //  if(infoMachineSettings.autoLevel == 1){
+      //      infoMenu.menu[++infoMenu.cur] = menuAutoLeveling;
+      //    }
+      //  else{
+      //    infoMenu.menu[++infoMenu.cur] = menuManualLeveling;
+      //    }
+      //  break;
       default:break;
     }
     loopProcess();
