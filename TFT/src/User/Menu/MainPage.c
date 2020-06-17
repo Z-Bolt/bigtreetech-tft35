@@ -52,10 +52,10 @@ void classicMenu(void)
   // title
   LABEL_READY,
   // icon             label
-    {{ICON_MAINMENU,      LABEL_MAINMENU},
-      {ICON_LOAD,     LABEL_LOAD},
+    { {ICON_SUBMENU,    LABEL_SUBMENU},
+      {ICON_LOAD,       LABEL_LOAD},
       {ICON_UNLOAD,     LABEL_UNLOAD},
-      {ICON_PRINT,    LABEL_PRINT},
+      {ICON_PRINT,      LABEL_PRINT},
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
@@ -82,7 +82,7 @@ void classicMenu(void)
     key_num = menuKeyGetValue();
     switch(key_num)
     {
-      case KEY_ICON_0: infoMenu.menu[++infoMenu.cur] = menuSettings;   break;
+      case KEY_ICON_0: infoMenu.menu[++infoMenu.cur] = menuSubmenu;   break;
       case KEY_ICON_1: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
       case KEY_ICON_2: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
       case KEY_ICON_3: infoMenu.menu[++infoMenu.cur] = menuPrint;     break;

@@ -182,5 +182,6 @@
     #define JP_300_SECONDS            "5 Min."
     #define JP_CUSTOM_SECONDS         "Custom"
     #define JP_ST7920_FULLSCREEN      "Marlin mode in fullscreen"
- #define JP_CHANGE                 "Change"
+    #define JP_CHANGE                 "Change"
+    #define JP_SUBMENU                "Menu"
 #endif

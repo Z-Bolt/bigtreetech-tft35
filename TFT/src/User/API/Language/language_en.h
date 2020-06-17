@@ -183,4 +183,5 @@
     #define EN_CUSTOM_SECONDS         "Custom"
     #define EN_ST7920_FULLSCREEN      "Marlin mode in fullscreen"
     #define EN_CHANGE                 "Change"
+    #define EN_SUBMENU                "Menu"
 #endif

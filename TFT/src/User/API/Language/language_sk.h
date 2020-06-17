@@ -182,5 +182,6 @@
     #define SK_300_SECONDS            "5 Min."
     #define SK_CUSTOM_SECONDS         "Custom"
     #define SK_ST7920_FULLSCREEN      "Marlin mode in fullscreen"
- #define SK_CHANGE                 "Change"
+    #define SK_CHANGE                 "Change"
+    #define SK_SUBMENU                "Menu"
 #endif

@@ -182,5 +182,6 @@
     #define GR_300_SECONDS            "5 Λεπτά"
     #define GR_CUSTOM_SECONDS         "Τροποποιημένες ρυθμίσεις"
     #define GR_ST7920_FULLSCREEN      "Λειτουργία Marlin σε πλήρη οθόνη"
- #define GR_CHANGE                 "Change"
+    #define GR_CHANGE                 "Change"
+    #define GR_SUBMENU                "Menu"
 #endif

@@ -182,5 +182,6 @@
     #define TR_300_SECONDS            "5 Dak."
     #define TR_CUSTOM_SECONDS         "Kişisel"
     #define TR_ST7920_FULLSCREEN      "Tam ekran Marlin modu."
- #define TR_CHANGE                 "Change"
+    #define TR_CHANGE                 "Change"
+    #define TR_SUBMENU                "Menu"
 #endif

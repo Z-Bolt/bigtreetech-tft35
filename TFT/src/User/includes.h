@@ -75,6 +75,7 @@
 #include "ledcolor.h"
 #include "Parametersetting.h"
 #include "Change.h"
+#include "Submenu.h"
 
 #include "Extrude.h"
 #include "Fan.h"
