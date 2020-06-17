@@ -5,9 +5,9 @@ const MENUITEMS StatusItems = {
 // title
 LABEL_READY,
 // icon                       label
- {{ICON_STATUS_NOZZLE,         LABEL_BACKGROUND},
-  {ICON_STATUS_BED,            LABEL_BACKGROUND},
-  {ICON_STATUS_FAN,            LABEL_BACKGROUND},
+ {{ICON_STATUS_NOZZLE,        LABEL_BACKGROUND},
+  {ICON_STATUS_BED,           LABEL_BACKGROUND},
+  {ICON_CHANGE,               LABEL_BACKGROUND},
   {ICON_STATUS_SPEED,         LABEL_BACKGROUND},
   {ICON_MAINMENU,             LABEL_MAINMENU},
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
@@ -19,7 +19,7 @@ const ITEM ToolItems[3] = {
 // icon                       label
   {ICON_STATUS_NOZZLE,         LABEL_BACKGROUND},
   {ICON_STATUS_BED,            LABEL_BACKGROUND},
-  {ICON_STATUS_FAN,            LABEL_BACKGROUND},
+  {ICON_CHANGE,            LABEL_BACKGROUND},
 };
 const ITEM SpeedItems[2] = {
 // icon                       label

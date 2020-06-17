@@ -123,4 +123,6 @@ typedef struct
 }CLOCKS;
 extern CLOCKS mcuClocks;
 
+//extern bool do_change;
+
 #endif

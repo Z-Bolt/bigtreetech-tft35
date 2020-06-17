@@ -1,6 +1,9 @@
 #include "Heat.h"
 #include "includes.h"
 
+extern bool do_change;
+extern bool do_change_load;
+
 //1 title, ITEM_PER_PAGE items (icon + label)
 MENUITEMS heatItems = {
 // title
@@ -306,6 +309,7 @@ void updateNextHeatCheckTime(void)
 }
 
 
+
 void loopCheckHeater(void)
 {
   do
@@ -334,6 +338,28 @@ void loopCheckHeater(void)
 
     if(infoMenu.menu[infoMenu.cur] == menuHeat)                        break;
     update_time = TEMPERATURE_QUERY_SLOW_DURATION;
+  }
+
+
+  if(do_change)
+  {
+    if(heater.T[1].current > 210)
+    {
+      do_change = false;
+      storeCmd("G1 E-700 F5000\n");
+      storeCmd("G92 E0\n");
+    }
+  }
+
+  if(do_change_load)
+  {
+    if(heater.T[1].current > 210)
+    {
+      do_change_load = false;
+      storeCmd("G1 E550 F5000\n");
+      storeCmd("G1 E650 F300\n");
+      storeCmd("G92 E0\n");
+    }
   }
 
   for(TOOL i = BED; i < (infoSettings.tool_count + 1); i++) // If the target temperature changes, send a Gcode to set the motherboard
