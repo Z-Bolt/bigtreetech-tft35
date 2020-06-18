@@ -5,14 +5,14 @@ const MENUITEMS StatusItems = {
 // title
 LABEL_READY,
 // icon                       label
- {{ICON_STATUS_NOZZLE,        LABEL_BACKGROUND},
-  {ICON_STATUS_BED,           LABEL_BACKGROUND},
-  {ICON_FAN,                  LABEL_BACKGROUND},
-  {ICON_STATUS_SPEED,         LABEL_BACKGROUND},
-  {ICON_MAINMENU,             LABEL_MAINMENU},
-  {ICON_BACKGROUND,           LABEL_BACKGROUND},
-  {ICON_BACKGROUND,           LABEL_BACKGROUND},
-  {ICON_PRINT,                LABEL_PRINT},}
+    { {ICON_SUBMENU,    LABEL_SUBMENU},
+      {ICON_LOAD,       LABEL_LOAD},
+      {ICON_UNLOAD,     LABEL_UNLOAD},
+      {ICON_PRINT,      LABEL_PRINT},
+      {ICON_BACKGROUND,  LABEL_BACKGROUND},
+      {ICON_BACKGROUND,  LABEL_BACKGROUND},
+      {ICON_BACKGROUND,  LABEL_BACKGROUND},
+      {ICON_BACKGROUND,  LABEL_BACKGROUND}}
 };
 
 const ITEM ToolItems[3] = {
@@ -142,7 +142,7 @@ void drawTemperature(void)
   GUI_DispStringInPrect(&RecGantry,(u8 *)tempstr);
 
   GUI_RestoreColorDefault();
-}
+} 
 
 void storegantry(int n, float val){
     //float* px = &val;
@@ -189,6 +189,7 @@ void gantry_inc(int n, float val){
     break;
   }
 }
+
 void gantry_dec(int n, float val){
     //float* px = &val;
   switch (n)
@@ -266,7 +267,7 @@ void scrollMsg(void){
   Scroll_DispString(&msgScroll,CENTER);
   GUI_RestoreColorDefault();
 }
-
+/*
 void toggleTool(void)
 {
   if (OS_GetTimeMs() > nextTime)
@@ -299,7 +300,7 @@ void toggleTool(void)
       gantryCmdWait = false;
     }
   }
-}
+}*/
 
 void menuStatus(void)
 {
@@ -308,10 +309,10 @@ void menuStatus(void)
   GUI_SetBkColor(infoSettings.bg_color);
   //set_status_icon();
   menuDrawPage(&StatusItems);
-  GUI_SetColor(infoSettings.status_xyz_bg_color);
+  //GUI_SetColor(infoSettings.status_xyz_bg_color);
       //GUI_ClearPrect(&RecGantry);
-  GUI_FillPrect(&RecGantry);
-  drawTemperature();
+  //GUI_FillPrect(&RecGantry);
+  //drawTemperature();
   drawStatusScreenMsg();
   while (infoMenu.menu[infoMenu.cur] == menuStatus)
   {
@@ -328,30 +329,14 @@ void menuStatus(void)
     key_num = menuKeyGetValue();
     switch (key_num)
     {
-      case KEY_ICON_0:
-        heatSetCurrentTool(NOZZLE0);
-        infoMenu.menu[++infoMenu.cur] = menuHeat;
-        break;
-      case KEY_ICON_1:
-        heatSetCurrentTool(BED);
-        infoMenu.menu[++infoMenu.cur] = menuHeat;
-        break;
-      case KEY_ICON_2:
-        infoMenu.menu[++infoMenu.cur] = menuChange;
-        break;
-      case KEY_ICON_3:
-        infoMenu.menu[++infoMenu.cur] = menuSpeed;
-        break;
-      case KEY_ICON_4:
-        infoMenu.menu[++infoMenu.cur] = unifiedMenu;
-        break;
-      case KEY_ICON_7:
-        infoMenu.menu[++infoMenu.cur] = menuPrint;
-        break;
+      case KEY_ICON_0: infoMenu.menu[++infoMenu.cur] = menuSubmenu;   break;
+      case KEY_ICON_1: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
+      case KEY_ICON_2: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
+      case KEY_ICON_3: infoMenu.menu[++infoMenu.cur] = menuPrint;     break;
 
       default:break;
     }
-    toggleTool();
+   // toggleTool();
     loopProcess();
   }
 }

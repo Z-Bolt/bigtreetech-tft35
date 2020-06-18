@@ -184,6 +184,7 @@ void update_gantry(void)
     nextTime = OS_GetTimeMs() + update_time;
   }
 }
+
 void drawXYZ(void){
   char tempstr[100];
   //GUI_SetColor(GANTRYLBL_BKCOLOR);

@@ -1,8 +1,6 @@
 #include "MainPage.h"
 #include "includes.h"
 
-
-
 void unifiedMenu(void){
     //1 title, ITEM_PER_PAGE items(icon+label)
 MENUITEMS unifiedPageItems = {
@@ -62,16 +60,6 @@ void classicMenu(void)
       {ICON_BACKGROUND,  LABEL_BACKGROUND}}
   };
 
- // if (infoMachineSettings.autoLevel == 1)
- // {
- //   classicPageItems.items[7].icon = ICON_LEVELING;
- //   classicPageItems.items[7].label.index = LABEL_ABL;
- // }
- // else
- // {
- //   classicPageItems.items[7].icon = ICON_MANUAL_LEVEL;
- //   classicPageItems.items[7].label.index = LABEL_LEVELING;
- // }
   KEY_VALUES key_num=KEY_IDLE;
   GUI_SetBkColor(infoSettings.bg_color);
 
