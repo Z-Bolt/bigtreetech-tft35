@@ -6,7 +6,7 @@ const MENUITEMS UnifiedHeatItems = {
 // title
 LABEL_UNIFIEDHEAT,
 // icon                       label
- {{ICON_HEAT,                 LABEL_PREHEAT},
+ {{ICON_PREHEAT,              LABEL_PREHEAT},
   {ICON_HEAT,                 LABEL_HEAT},
   {ICON_FAN,                  LABEL_FAN},
   {ICON_COOLDOWN,             LABEL_COOLDOWN},

@@ -47,8 +47,8 @@ static FONT_BITMAP font[] = {
     BYTE_HEIGHT,
     BYTE_WIDTH,
     WORD_UNICODE,
-    BYTE_HEIGHT,
-    BYTE_WIDTH * 2,
+    BYTE_HEIGHT * 2,
+    BYTE_WIDTH,
     0,
   },
   { // Armenian
