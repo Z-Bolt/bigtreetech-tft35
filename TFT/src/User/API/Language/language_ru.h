@@ -183,5 +183,5 @@
     #define RU_CUSTOM_SECONDS         "Своё"
     #define RU_ST7920_FULLSCREEN      "Marlin на весь экран"
     #define RU_CHANGE                 "Замена"
-    #define RU_SUBMENU                "Бургер"
+    #define RU_SUBMENU                "Меню"
 #endif

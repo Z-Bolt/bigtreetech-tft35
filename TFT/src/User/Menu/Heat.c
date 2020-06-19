@@ -356,8 +356,8 @@ void loopCheckHeater(void)
     if(heater.T[1].current > 210)
     {
       do_change_load = false;
-      storeCmd("G1 E550 F5000\n");
-      storeCmd("G1 E650 F300\n");
+      storeCmd("G1 E600 F5000\n");
+      storeCmd("G1 E670 F300\n");
       storeCmd("G92 E0\n");
     }
   }

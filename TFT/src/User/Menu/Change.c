@@ -15,10 +15,10 @@ const MENUITEMS changeItems = {
 //   title
 LABEL_CHANGE,
 // icon                       label
- {{ICON_UNLOAD,               LABEL_UNLOAD},
+ {{ICON_LOAD,                 LABEL_LOAD},
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
-  {ICON_LOAD,                 LABEL_LOAD},
+  {ICON_UNLOAD,               LABEL_UNLOAD},
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
   {ICON_BACKGROUND,           LABEL_BACKGROUND},
@@ -34,29 +34,8 @@ void menuChange(void)
     key_num = menuKeyGetValue();
     switch(key_num)
     {
-      //case KEY_ICON_0: storeCmd("G28\n");   break;
-     // case KEY_ICON_1: storeCmd("G28 X\n"); break;
-      //case KEY_ICON_2: storeCmd("G28 Y\n"); break;
-     // case KEY_ICON_3: storeCmd("G28 Z\n"); break;
-      case KEY_ICON_0: {//выгрузка
-      storeCmd("G28 F6000\n");
-           storeCmd("G90\n");
-           mustStoreCmd("G1 X185 Y5 F6000\n");
-           storeCmd("M82\n");
-           storeCmd("G92 E0\n");
-           //storeCmd("M104 S210\n");
-         
-           //storeCmd("M109 S210\n");
-           //WAIT TILL 210
-           heatSetTargetTemp(1, 210);
-           do_change = true;
-        loopProcess();
 
-          /// storeCmd("G1 E-700 F5000\n");
-          /// storeCmd("G92 E0\n");
-      break;
-      }
-      case KEY_ICON_3: {//загрузка
+      case KEY_ICON_0: {//загрузка
       storeCmd("G28 F6000\n");
            //storeCmd("G90\n");
            //mustStoreCmd("G1 X185 Y5 F6000\n");
@@ -68,6 +47,22 @@ void menuChange(void)
            //WAIT TILL 210
            heatSetTargetTemp(1, 210);
            do_change_load = true;
+        loopProcess();
+          /// storeCmd("G1 E-700 F5000\n");
+          /// storeCmd("G92 E0\n");
+      break;
+      }
+            case KEY_ICON_3: {//выгрузка
+      storeCmd("G28 F6000\n");
+           storeCmd("G90\n");
+           mustStoreCmd("G1 X185 Y5 F6000\n");
+           storeCmd("M82\n");
+           storeCmd("G92 E0\n");
+           //storeCmd("M104 S210\n");
+           //storeCmd("M109 S210\n");
+           //WAIT TILL 210
+           heatSetTargetTemp(1, 210);
+           do_change = true;
         loopProcess();
 
           /// storeCmd("G1 E-700 F5000\n");
