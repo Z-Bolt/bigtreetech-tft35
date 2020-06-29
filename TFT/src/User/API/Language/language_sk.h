@@ -184,4 +184,7 @@
     #define SK_ST7920_FULLSCREEN      "Marlin mode in fullscreen"
     #define SK_CHANGE                 "Change"
     #define SK_SUBMENU                "Menu"
+    #define SK_CONFIRM_LOAD           "Confirm load"
+    #define SK_CONFIRM_UNLOAD         "Confirm unload"
+    #define SK_WAIT_HEAT              "Heating, wait..."
 #endif

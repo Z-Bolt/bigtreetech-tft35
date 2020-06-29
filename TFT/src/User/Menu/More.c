@@ -35,7 +35,7 @@ LABEL_MORE,
   {ICON_PERCENTAGE,           LABEL_PERCENTAGE},
   {ICON_BABYSTEP,             LABEL_BABYSTEP},
   {ICON_FEATURE_SETTINGS,     LABEL_FEATURE_SETTINGS},
-  {ICON_RGB_SETTINGS,         LABEL_RGB_SETTINGS},
+  {ICON_BACKGROUND,           LABEL_BACKGROUND},
   {ICON_BACK,                 LABEL_BACK},}
 };
 
@@ -76,10 +76,10 @@ void menuMore(void)
         infoMenu.menu[++infoMenu.cur] = menuFeatureSettings;
         break;
 
-      case KEY_ICON_6:
+     /* case KEY_ICON_6:
         infoMenu.menu[++infoMenu.cur] = menuRGBSettings;
         break;
-
+      */
       case KEY_ICON_7:
         infoMenu.cur--;
         break;

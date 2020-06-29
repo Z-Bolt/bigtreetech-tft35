@@ -6,12 +6,12 @@
 
 BUTTON bottomSingleBtn = {
   //button location                       color before pressed   color after pressed
-  POPUP_RECT_SINGLE_CONFIRM, NULL, 5, 1, GREEN, BLACK, WHITE,   GREEN, WHITE, BLACK
+  POPUP_RECT_SINGLE_CONFIRM, NULL, 5, 1, BLACK, BLACK, WHITE,   WHITE, WHITE, BLACK
 };
 
 BUTTON bottomDoubleBtn[] = {
-  {POPUP_RECT_DOUBLE_CONFIRM, NULL, 5, 1, GREEN, BLACK, WHITE,   GREEN, WHITE, BLACK},
-  {POPUP_RECT_DOUBLE_CANCEL,  NULL, 5, 1, GREEN, BLACK, WHITE,   GREEN, WHITE, BLACK},
+  {POPUP_RECT_DOUBLE_CONFIRM, NULL, 5, 1, BLACK, BLACK, WHITE,   WHITE, WHITE, BLACK},
+  {POPUP_RECT_DOUBLE_CANCEL,  NULL, 5, 1, BLACK, BLACK, WHITE,   WHITE, WHITE, BLACK},
 };
 
 GUI_RECT doubleBtnRect[] ={POPUP_RECT_DOUBLE_CONFIRM, POPUP_RECT_DOUBLE_CANCEL};
@@ -19,10 +19,10 @@ GUI_RECT doubleBtnRect[] ={POPUP_RECT_DOUBLE_CONFIRM, POPUP_RECT_DOUBLE_CANCEL};
 
 WINDOW window = {
   POPUP_RECT_WINDOW,                      //rectangle position and size of popup window
-  10,                                     //Four-corner arc radius
+  5,                                     //Four-corner arc radius 10
   3,                                      //Outer line width
-  0x5D7B,                                 //Outer and title bar background color
-  {MAGENTA, 0x5D7B, POPUP_TITLE_HEIGHT},  //Title bar font color / background color / height
+  GRAY,                                 //Outer and title bar background color 0x5D7B
+  {ORANGE, GRAY, POPUP_TITLE_HEIGHT},  //Title bar font color / background color 0x5D7B / height 
   {WHITE, BLACK, POPUP_TEXT_HEIGHT},      //Message area font color / background color / height
   {WHITE, GRAY,  POPUP_BOTTOM_HEIGHT},    //Bottom (font color) / background color / (height)
 };

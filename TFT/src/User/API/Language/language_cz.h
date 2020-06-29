@@ -184,4 +184,7 @@
     #define CZ_ST7920_FULLSCREEN      "Celoobrazovkový režim Marlin"
     #define CZ_CHANGE                 "Change"
     #define CZ_SUBMENU                "Menu"
+    #define CZ_CONFIRM_LOAD           "Confirm load"
+    #define CZ_CONFIRM_UNLOAD         "Confirm unload"
+    #define CZ_WAIT_HEAT              "Heating, wait..."
 #endif

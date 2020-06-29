@@ -184,4 +184,7 @@
     #define GR_ST7920_FULLSCREEN      "Λειτουργία Marlin σε πλήρη οθόνη"
     #define GR_CHANGE                 "Change"
     #define GR_SUBMENU                "Menu"
+    #define GR_CONFIRM_LOAD           "Confirm load"
+    #define GR_CONFIRM_UNLOAD         "Confirm unload"
+    #define GR_WAIT_HEAT              "Heating, wait..."
 #endif

@@ -13,6 +13,10 @@ void menuChange(void);
 void waitTill210(void);
 
 void updateNextHeatCheckTime2(void);
+void menuConfirmLoad(void);
+void menuConfirmUnload(void);
+void Load(void);
+void Unload(void);
 
 /*
 bool heatHasWaiting2(void);

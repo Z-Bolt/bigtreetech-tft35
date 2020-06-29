@@ -184,4 +184,7 @@
     #define CN_ST7920_FULLSCREEN      "全屏显示Marlin模式"
     #define CN_CHANGE                 "Change"
     #define CN_SUBMENU                "Menu"
+    #define CN_CONFIRM_LOAD           "Confirm load"
+    #define CN_CONFIRM_UNLOAD         "Confirm unload"
+    #define CN_WAIT_HEAT              "Heating, wait..."
 #endif

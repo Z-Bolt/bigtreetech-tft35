@@ -4,6 +4,7 @@
 
 bool do_change;
 bool do_change_load;
+bool do_finish_load;
 
 static u32     update_time = TEMPERATURE_QUERY_SLOW_DURATION;
 static bool    update_waiting = false;
@@ -36,9 +37,40 @@ void menuChange(void)
     {
 
       case KEY_ICON_0: {//загрузка
-      storeCmd("G28 F6000\n");
-           //storeCmd("G90\n");
-           //mustStoreCmd("G1 X185 Y5 F6000\n");
+
+            infoMenu.menu[++infoMenu.cur] = menuConfirmLoad;
+          /// storeCmd("G1 E-700 F5000\n");
+          /// storeCmd("G92 E0\n");
+      break;
+      }
+        
+      case KEY_ICON_3: {//выгрузка
+      
+            infoMenu.menu[++infoMenu.cur] = menuConfirmUnload;
+           /*    
+           storeCmd("G28 F6000\n");
+           storeCmd("G90\n");
+           mustStoreCmd("G1 X185 Y5 F6000\n");
+           storeCmd("M82\n");
+           storeCmd("G92 E0\n");
+           heatSetTargetTemp(1, 210);
+           do_change = true;
+           loopProcess();
+            */
+      break;
+      }
+      case KEY_ICON_7: infoMenu.cur--;      break;
+      default:break;
+    }
+    loopProcess();
+  }
+}
+
+void Load()
+{
+        storeCmd("G28 F6000\n");
+           storeCmd("G90\n");
+           mustStoreCmd("G1 X5 Y5 F9000\n");
            storeCmd("M82\n");
            storeCmd("G92 E0\n");
            //storeCmd("M104 S210\n");
@@ -48,33 +80,73 @@ void menuChange(void)
            heatSetTargetTemp(1, 210);
            do_change_load = true;
         loopProcess();
-          /// storeCmd("G1 E-700 F5000\n");
-          /// storeCmd("G92 E0\n");
-      break;
-      }
-            case KEY_ICON_3: {//выгрузка
-      storeCmd("G28 F6000\n");
-           storeCmd("G90\n");
-           mustStoreCmd("G1 X185 Y5 F6000\n");
-           storeCmd("M82\n");
-           storeCmd("G92 E0\n");
-           //storeCmd("M104 S210\n");
-           //storeCmd("M109 S210\n");
-           //WAIT TILL 210
-           heatSetTargetTemp(1, 210);
-           do_change = true;
-        loopProcess();
+}
 
-          /// storeCmd("G1 E-700 F5000\n");
-          /// storeCmd("G92 E0\n");
-      break;
-      }
-      case KEY_ICON_7: infoMenu.cur--;      break;
-      default:break;
+void Unload()
+{
+        storeCmd("G28 F6000\n");
+        storeCmd("G90\n");
+        mustStoreCmd("G1 X5 Y5 F9000\n");
+        storeCmd("M82\n");
+        storeCmd("G92 E0\n");
+        heatSetTargetTemp(1, 210);
+        do_change = true;
+        loopProcess();
+}
+
+
+void menuConfirmLoad(void)
+{
+  u16 key_num = IDLE_TOUCH;
+
+  popupDrawPage(bottomDoubleBtn, textSelect(LABEL_WARNING), textSelect(LABEL_CONFIRM_LOAD), textSelect(LABEL_CONFIRM), textSelect(LABEL_CANCEL));
+
+  while(infoMenu.menu[infoMenu.cur] == menuConfirmLoad)
+  {
+    key_num = KEY_GetValue(2, doubleBtnRect);
+    switch(key_num)
+    {
+      case KEY_POPUP_CONFIRM:
+        //abortPrinting();
+        Load();
+        infoMenu.cur--;
+        break;
+
+      case KEY_POPUP_CANCEL:
+        infoMenu.cur--;
+        statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_READY));
+        break;
     }
     loopProcess();
   }
 }
+
+void menuConfirmUnload(void)
+{
+  u16 key_num = IDLE_TOUCH;
+
+  popupDrawPage(bottomDoubleBtn, textSelect(LABEL_WARNING), textSelect(LABEL_CONFIRM_UNLOAD), textSelect(LABEL_CONFIRM), textSelect(LABEL_CANCEL));
+
+  while(infoMenu.menu[infoMenu.cur] == menuConfirmUnload)
+  {
+    key_num = KEY_GetValue(2, doubleBtnRect);
+    switch(key_num)
+    {
+      case KEY_POPUP_CONFIRM:
+        //abortPrinting();
+        Unload();
+        infoMenu.cur--;
+        break;
+
+      case KEY_POPUP_CANCEL:
+        infoMenu.cur--;
+        statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_READY));
+        break;
+    }
+    loopProcess();
+  }
+}
+
 
 /*
 u32 nextHeatCheckTime2 = 0;

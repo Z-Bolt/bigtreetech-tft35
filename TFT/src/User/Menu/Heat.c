@@ -3,6 +3,7 @@
 
 extern bool do_change;
 extern bool do_change_load;
+extern bool do_finish_load;
 
 //1 title, ITEM_PER_PAGE items (icon + label)
 MENUITEMS heatItems = {
@@ -56,6 +57,7 @@ static bool    send_waiting[HEATER_NUM];
 void heatSetTargetTemp(TOOL tool, u16 temp)
 {
   heater.T[tool].target = temp;
+  statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_WAIT_HEAT));
 }
 /*Sync target temperature*/
 void heatSyncTargetTemp(TOOL tool, u16 temp)
@@ -343,24 +345,40 @@ void loopCheckHeater(void)
 
   if(do_change)
   {
-    if(heater.T[1].current > 210)
+   // statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_UNCONNECTED));
+    if(heater.T[1].current > 208)
     {
       do_change = false;
-      storeCmd("G1 E-700 F5000\n");
+      storeCmd("G1 E-750 F5000\n");
       storeCmd("G92 E0\n");
+
+      statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_UNLOAD));
     }
   }
 
   if(do_change_load)
   {
-    if(heater.T[1].current > 210)
+    //statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_UNCONNECTED));
+    if(heater.T[1].current > 208)
     {
       do_change_load = false;
-      storeCmd("G1 E600 F5000\n");
+      do_finish_load = true;
+
+      statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_LOAD));
+      storeCmd("G1 E640 F5000\n");
       storeCmd("G1 E670 F300\n");
+      storeCmd("G1 E690 F150\n");
       storeCmd("G92 E0\n");
+    //  statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_LOAD));
     }
   }
+
+  //if(heater.T[1].current > 220)
+    //{
+    //   statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_COOLDOWN));
+   // }
+
+ 
 
   for(TOOL i = BED; i < (infoSettings.tool_count + 1); i++) // If the target temperature changes, send a Gcode to set the motherboard
   {

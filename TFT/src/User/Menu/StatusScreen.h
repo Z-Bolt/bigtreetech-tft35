@@ -14,7 +14,7 @@
 #define INFOMSG_COLOR       WHITE
 
 void menuStatus(void);
-//void set_status_icon(void);
+void set_status_icon(void);
 void drawTemperature(void);
 void storegantry(int n, float val);
 void toggleTool(void);

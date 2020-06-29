@@ -184,4 +184,7 @@
     #define JP_ST7920_FULLSCREEN      "Marlin mode in fullscreen"
     #define JP_CHANGE                 "Change"
     #define JP_SUBMENU                "Menu"
+    #define JP_CONFIRM_LOAD           "Confirm load"
+    #define JP_CONFIRM_UNLOAD         "Confirm unload"
+    #define JP_WAIT_HEAT              "Heating, wait..."
 #endif

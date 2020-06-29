@@ -9,6 +9,9 @@ static u8 cmd_index=0;
 
 static bool ispolling = true;
 
+
+//extern bool do_finish_load;
+
 // Is there a code character in the current gcode command.
 static bool cmd_seen(char code)
 {
@@ -793,6 +796,12 @@ void sendQueueCmd(void)
             // Restore mode
             coorSetRelative(coorRelative);
             eSetRelative(eRelative);
+
+           // if(do_finish_load)
+           // { 
+            //   do_finish_load=false;
+            //   statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_COOLDOWN));
+            //}
             break;
           }
         }

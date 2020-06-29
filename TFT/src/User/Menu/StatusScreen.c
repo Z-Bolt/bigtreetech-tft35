@@ -1,9 +1,12 @@
 #include "StatusScreen.h"
+#include "Change.h"
+
+extern bool do_change_load;
 
 //1 title, ITEM_PER_PAGE items (icon + label)
 const MENUITEMS StatusItems = {
 // title
-LABEL_READY,
+LABEL_BACKGROUND,
 // icon                       label
     { {ICON_SUBMENU,    LABEL_SUBMENU},
       {ICON_LOAD,       LABEL_LOAD},
@@ -330,8 +333,8 @@ void menuStatus(void)
     switch (key_num)
     {
       case KEY_ICON_0: infoMenu.menu[++infoMenu.cur] = menuSubmenu;   break;
-      case KEY_ICON_1: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
-      case KEY_ICON_2: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
+      case KEY_ICON_1: infoMenu.menu[++infoMenu.cur] = menuConfirmLoad; break;
+      case KEY_ICON_2: infoMenu.menu[++infoMenu.cur] = menuConfirmUnload;     break;
       case KEY_ICON_3: infoMenu.menu[++infoMenu.cur] = menuPrint;     break;
 
       default:break;

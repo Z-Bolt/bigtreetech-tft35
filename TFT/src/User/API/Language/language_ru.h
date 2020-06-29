@@ -184,4 +184,7 @@
     #define RU_ST7920_FULLSCREEN      "Marlin на весь экран"
     #define RU_CHANGE                 "Замена"
     #define RU_SUBMENU                "Меню"
+    #define RU_CONFIRM_LOAD           "Убедитесь, что филамент\nвставлен в экструдер и\nнажмите ОК"
+    #define RU_CONFIRM_UNLOAD         "Выгрузить филамент?"
+    #define RU_WAIT_HEAT              "Ждите, идет нагрев..."
 #endif

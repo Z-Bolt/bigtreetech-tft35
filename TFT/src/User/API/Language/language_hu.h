@@ -184,4 +184,7 @@
     #define HU_ST7920_FULLSCREEN      "Nagyképernyős Marlin mód"
     #define HU_CHANGE                 "Change"
     #define HU_SUBMENU                "Menu"
+    #define HU_CONFIRM_LOAD           "Confirm load"
+    #define HU_CONFIRM_UNLOAD         "Confirm unload"
+    #define HU_WAIT_HEAT              "Heating, wait..."
 #endif

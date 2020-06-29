@@ -184,4 +184,7 @@
     #define TR_ST7920_FULLSCREEN      "Tam ekran Marlin modu."
     #define TR_CHANGE                 "Change"
     #define TR_SUBMENU                "Menu"
+    #define TR_CONFIRM_LOAD           "Confirm load"
+    #define TR_CONFIRM_UNLOAD         "Confirm unload"
+    #define TR_WAIT_HEAT              "Heating, wait..."
 #endif

@@ -184,4 +184,7 @@
     #define EN_ST7920_FULLSCREEN      "Marlin mode in fullscreen"
     #define EN_CHANGE                 "Change"
     #define EN_SUBMENU                "Menu"
+    #define EN_CONFIRM_LOAD           "Confirm load"
+    #define EN_CONFIRM_UNLOAD         "Confirm unload"
+    #define EN_WAIT_HEAT              "Heating, wait..."
 #endif

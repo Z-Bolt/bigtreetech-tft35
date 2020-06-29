@@ -184,4 +184,7 @@
     #define PL_ST7920_FULLSCREEN      "Marlin mode in fullscreen"
     #define PL_CHANGE                 "Change"
     #define PL_SUBMENU                "Menu"
+    #define PL_CONFIRM_LOAD           "Confirm load"
+    #define PL_CONFIRM_UNLOAD         "Confirm unload"
+    #define PL_WAIT_HEAT              "Heating, wait..."
 #endif

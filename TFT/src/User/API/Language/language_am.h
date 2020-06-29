@@ -184,4 +184,7 @@
     #define AM_ST7920_FULLSCREEN      "Marlin mode in fullscreen"
     #define AM_CHANGE                 "Change"
     #define AM_SUBMENU                "Menu"
+    #define AM_CONFIRM_LOAD           "Confirm load"
+    #define AM_CONFIRM_UNLOAD         "Confirm unload"
+    #define AM_WAIT_HEAT              "Heating, wait..."
 #endif
