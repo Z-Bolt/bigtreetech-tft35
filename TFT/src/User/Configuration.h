@@ -260,10 +260,10 @@
  * Most suitable for Delta printers since most printers will crash into printed model when homing after powerloss.
  */
 // Home before power loss recovery
-#define HOME_BEFORE_PLR false   //to enabled: true | to disabled: false
+#define HOME_BEFORE_PLR true   //to enabled: true | to disabled: false
 
 // Backup power / UPS to move Z axis on power loss
-#define BTT_MINI_UPS    false   //to enabled: true | to disabled: false
+#define BTT_MINI_UPS    true   //to enabled: true | to disabled: false
 
 // (mm) Raise Z axis on resume (on power loss with UPS)
 #define POWER_LOSS_ZRAISE 10
