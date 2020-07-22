@@ -39,7 +39,7 @@ static int key_pause = 4;
 const char* Speed_ID[2] = {"Speed","Flow"};
 
 
-#define LAYER_TITLE "Layer"
+#define LAYER_TITLE " Layer"
 #define EXT_ICON_POS  0
 #define BED_ICON_POS  1
 #define FAN_ICON_POS  2
