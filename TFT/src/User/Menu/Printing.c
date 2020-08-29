@@ -816,7 +816,7 @@ void menuShutDown(void)
       shutdown:
         for(u8 i = 0; i < infoSettings.fan_count; i++)
         {
-          mustStoreCmd("%s S0\n", fanCmd[i]);
+          mustStoreCmd( fanCmd[i]);
         }
         mustStoreCmd("M81\n");
         infoMenu.cur--;
