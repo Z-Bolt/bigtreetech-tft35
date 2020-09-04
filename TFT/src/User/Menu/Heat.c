@@ -349,6 +349,10 @@ void loopCheckHeater(void)
     if(heater.T[1].current > 208)
     {
       do_change = false;
+      storeCmd("G92 E0\n");
+      storeCmd("G1 E10 F100\n");
+      storeCmd("G1 E0 F1000\n");
+      storeCmd("G1 E-20 F200\n");
       storeCmd("G1 E-750 F5000\n");
       storeCmd("G92 E0\n");
 
@@ -365,9 +369,11 @@ void loopCheckHeater(void)
       do_finish_load = true;
 
       statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_LOAD));
+      storeCmd("G92 E0\n");
       storeCmd("G1 E640 F5000\n");
-      storeCmd("G1 E670 F300\n");
-      storeCmd("G1 E690 F150\n");
+      storeCmd("G1 E660 F300\n");
+      storeCmd("G1 E680 F150\n");
+      storeCmd("G1 E690 F100\n");
       storeCmd("G92 E0\n");
     //  statusScreen_setMsg(textSelect(LABEL_STATUS), textSelect(LABEL_LOAD));
     }
