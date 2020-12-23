@@ -187,4 +187,6 @@
     #define AM_CONFIRM_LOAD           "Confirm load"
     #define AM_CONFIRM_UNLOAD         "Confirm unload"
     #define AM_WAIT_HEAT              "Heating, wait..."
+    #define AM_BED_UP                 "Bed up"
+    #define AM_BED_DOWN               "Bed down"
 #endif

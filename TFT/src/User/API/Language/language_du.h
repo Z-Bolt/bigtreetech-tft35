@@ -187,4 +187,6 @@
     #define DU_CONFIRM_LOAD           "Confirm load"
     #define DU_CONFIRM_UNLOAD         "Confirm unload"
     #define DU_WAIT_HEAT              "Heating, wait..."
+    #define DU_BED_UP                 "Bed up"
+    #define DU_BED_DOWN               "Bed down"
 #endif

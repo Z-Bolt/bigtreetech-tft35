@@ -187,4 +187,6 @@
     #define GR_CONFIRM_LOAD           "Confirm load"
     #define GR_CONFIRM_UNLOAD         "Confirm unload"
     #define GR_WAIT_HEAT              "Heating, wait..."
+    #define GR_BED_UP                 "Bed up"
+    #define GR_BED_DOWN               "Bed down"
 #endif

@@ -187,4 +187,6 @@
     #define PT_CONFIRM_LOAD           "Confirm load"
     #define PT_CONFIRM_UNLOAD         "Confirm unload"
     #define PT_WAIT_HEAT              "Heating, wait..."
+    #define PT_BED_UP                 "Bed up"
+    #define PT_BED_DOWN               "Bed down"
 #endif

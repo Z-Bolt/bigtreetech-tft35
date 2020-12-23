@@ -187,4 +187,6 @@
     #define FR_CONFIRM_LOAD           "Confirm load"
     #define FR_CONFIRM_UNLOAD         "Confirm unload"
     #define FR_WAIT_HEAT              "Heating, wait..."
+    #define FR_BED_UP                 "Bed up"
+    #define FR_BED_DOWN               "Bed down"
 #endif

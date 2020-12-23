@@ -187,4 +187,6 @@
     #define PL_CONFIRM_LOAD           "Confirm load"
     #define PL_CONFIRM_UNLOAD         "Confirm unload"
     #define PL_WAIT_HEAT              "Heating, wait..."
+    #define PL_BED_UP                 "Bed up"
+    #define PL_BED_DOWN               "Bed down"
 #endif

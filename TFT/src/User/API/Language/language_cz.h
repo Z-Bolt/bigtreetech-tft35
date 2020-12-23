@@ -187,4 +187,6 @@
     #define CZ_CONFIRM_LOAD           "Confirm load"
     #define CZ_CONFIRM_UNLOAD         "Confirm unload"
     #define CZ_WAIT_HEAT              "Heating, wait..."
+    #define CZ_BED_UP                 "Bed up"
+    #define CZ_BED_DOWN               "Bed down"
 #endif

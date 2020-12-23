@@ -187,4 +187,6 @@
     #define TR_CONFIRM_LOAD           "Confirm load"
     #define TR_CONFIRM_UNLOAD         "Confirm unload"
     #define TR_WAIT_HEAT              "Heating, wait..."
+    #define TR_BED_UP                 "Bed up"
+    #define TR_BED_DOWN               "Bed down"
 #endif

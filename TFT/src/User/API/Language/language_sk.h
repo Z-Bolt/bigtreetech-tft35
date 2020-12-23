@@ -187,4 +187,6 @@
     #define SK_CONFIRM_LOAD           "Confirm load"
     #define SK_CONFIRM_UNLOAD         "Confirm unload"
     #define SK_WAIT_HEAT              "Heating, wait..."
+    #define SK_BED_UP                 "Bed up"
+    #define SK_BED_DOWN               "Bed down"
 #endif

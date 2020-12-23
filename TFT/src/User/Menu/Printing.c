@@ -802,6 +802,7 @@ void menuShutDown(void)
         goto shutdown;
 
       case KEY_POPUP_CANCEL:
+        mustStoreCmd("M107\n");
         infoMenu.cur--;
         break;
     }

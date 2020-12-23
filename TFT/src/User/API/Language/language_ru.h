@@ -187,4 +187,6 @@
     #define RU_CONFIRM_LOAD           "Убедитесь, что филамент\nвставлен в экструдер и\nнажмите ОК"
     #define RU_CONFIRM_UNLOAD         "Выгрузить филамент?"
     #define RU_WAIT_HEAT              "Ждите, идет нагрев..."
+    #define RU_BED_UP                 "Стол вверх"
+    #define RU_BED_DOWN               "Стол вниз"
 #endif

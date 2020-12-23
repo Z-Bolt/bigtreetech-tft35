@@ -187,4 +187,6 @@
     #define CN_CONFIRM_LOAD           "Confirm load"
     #define CN_CONFIRM_UNLOAD         "Confirm unload"
     #define CN_WAIT_HEAT              "Heating, wait..."
+    #define CN_BED_UP                 "Bed up"
+    #define CN_BED_DOWN               "Bed down"
 #endif

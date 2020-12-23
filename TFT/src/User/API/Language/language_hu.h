@@ -187,4 +187,6 @@
     #define HU_CONFIRM_LOAD           "Confirm load"
     #define HU_CONFIRM_UNLOAD         "Confirm unload"
     #define HU_WAIT_HEAT              "Heating, wait..."
+    #define HU_BED_UP                 "Bed up"
+    #define HU_BED_DOWN               "Bed down"
 #endif

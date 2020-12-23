@@ -187,4 +187,6 @@
     #define EN_CONFIRM_LOAD           "Confirm load"
     #define EN_CONFIRM_UNLOAD         "Confirm unload"
     #define EN_WAIT_HEAT              "Heating, wait..."
+    #define EN_BED_UP                 "Bed up"
+    #define EN_BED_DOWN               "Bed down"
 #endif

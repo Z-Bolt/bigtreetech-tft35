@@ -15,7 +15,7 @@ LABEL_BACKGROUND,
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
-      {ICON_BACKGROUND,  LABEL_BACKGROUND}}
+      {ICON_SHUT_DOWN,   LABEL_SHUT_DOWN}}
 };
 
 const ITEM ToolItems[3] = {
@@ -336,7 +336,7 @@ void menuStatus(void)
       case KEY_ICON_1: infoMenu.menu[++infoMenu.cur] = menuConfirmLoad; break;
       case KEY_ICON_2: infoMenu.menu[++infoMenu.cur] = menuConfirmUnload;     break;
       case KEY_ICON_3: infoMenu.menu[++infoMenu.cur] = menuPrint;     break;
-
+      case KEY_ICON_7: storeCmd("M81\n");   break;
       default:break;
     }
    // toggleTool();

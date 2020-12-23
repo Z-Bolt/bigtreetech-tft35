@@ -187,4 +187,6 @@
     #define JP_CONFIRM_LOAD           "Confirm load"
     #define JP_CONFIRM_UNLOAD         "Confirm unload"
     #define JP_WAIT_HEAT              "Heating, wait..."
+    #define JP_BED_UP                 "Bed up"
+    #define JP_BED_DOWN               "Bed down"
 #endif

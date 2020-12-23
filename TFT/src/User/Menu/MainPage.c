@@ -57,7 +57,7 @@ void classicMenu(void)
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
       {ICON_BACKGROUND,  LABEL_BACKGROUND},
-      {ICON_BACKGROUND,  LABEL_BACKGROUND}}
+      {ICON_SHUT_DOWN,   LABEL_SHUT_DOWN},}
   };
 
   KEY_VALUES key_num=KEY_IDLE;
@@ -74,6 +74,11 @@ void classicMenu(void)
       case KEY_ICON_1: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
       case KEY_ICON_2: infoMenu.menu[++infoMenu.cur] = menuChange;      break;
       case KEY_ICON_3: infoMenu.menu[++infoMenu.cur] = menuPrint;     break;
+      
+      case KEY_ICON_7:
+        storeCmd("M81\n");
+        break;
+        
       //case KEY_ICON_4: infoMenu.menu[++infoMenu.cur] = menuExtrude;   break;
       //case KEY_ICON_5: infoMenu.menu[++infoMenu.cur] = menuFan;       break;
       //case KEY_ICON_6: infoMenu.menu[++infoMenu.cur] = menuSettings;  break;

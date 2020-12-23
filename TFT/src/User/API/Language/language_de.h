@@ -187,4 +187,6 @@
     #define DE_CONFIRM_LOAD           "Confirm load"
     #define DE_CONFIRM_UNLOAD         "Confirm unload"
     #define DE_WAIT_HEAT              "Heating, wait..."
+    #define DE_BED_UP                 "Bed up"
+    #define DE_BED_DOWN               "Bed down"
 #endif
